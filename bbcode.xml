@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/bbcode.xsd">
+	<import>
+		<bbcode name="rating">
+			<buttonlabel>wcf.editor.button.rating</buttonlabel>
+			<classname>wcf\system\bbcode\RatingBBCode</classname>
+			<wysiwygicon>star</wysiwygicon>
+			<isBlockElement>1</isBlockElement>
+			<wysiwyg>1</wysiwyg>
+			<attributes>
+				<attribute name="0">
+					<validationpattern>^[0-5]{1,1}([,.][0-9]{1,1})?$</validationpattern>
+					<required>1</required>
+				</attribute>
+				<attribute name="1">
+					<validationpattern>[0]</validationpattern>
+					<required>0</required>
+				</attribute>
+			</attributes>
+		</bbcode>
+		<bbcode name="ratingbar">
+			<buttonlabel>wcf.editor.button.ratingBar</buttonlabel>
+			<classname>wcf\system\bbcode\RatingBarBBCode</classname>
+			<wysiwygicon>chart-bar</wysiwygicon>
+			<isBlockElement>1</isBlockElement>
+			<wysiwyg>1</wysiwyg>
+			<attributes>
+				<attribute name="0">
+					<validationpattern>[0-5]</validationpattern>
+					<required>1</required>
+				</attribute>
+			</attributes>
+		</bbcode>
+		<bbcode name="ratingarguments">
+			<buttonlabel>wcf.editor.button.ratingArguments</buttonlabel>
+			<classname>wcf\system\bbcode\RatingArgumentsBBCode</classname>
+			<wysiwygicon>thumbs-up</wysiwygicon>
+			<isBlockElement>1</isBlockElement>
+			<wysiwyg>1</wysiwyg>
+		</bbcode>
+		<bbcode name="cta">
+			<buttonlabel>wcf.editor.button.ratingCallToAction</buttonlabel>
+			<classname>wcf\system\bbcode\RatingCallToActionBBCode</classname>
+			<wysiwygicon>link</wysiwygicon>
+			<isBlockElement>1</isBlockElement>
+			<wysiwyg>1</wysiwyg>
+		</bbcode>
+	</import>
+</data>

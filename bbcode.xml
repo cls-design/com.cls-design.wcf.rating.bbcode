@@ -26,7 +26,7 @@
 			<wysiwyg>1</wysiwyg>
 			<attributes>
 				<attribute name="0">
-					<validationpattern>[0-5]</validationpattern>
+					<validationpattern>^[0-5]*$</validationpattern>
 					<required>1</required>
 				</attribute>
 			</attributes>

@@ -4,8 +4,8 @@
 		<category name="wcf.editor">
 			<item name="wcf.editor.button.rating"><![CDATA[Rating [rating=1.0-5.0][/rating]]]></item>
 			<item name="wcf.editor.button.ratingBar"><![CDATA[Single Rating [ratingbar=1-5][/ratingbar]]]></item>
-			<item name="wcf.editor.button.ratingArguments"><![CDATA[Pro / Con]]></item>
-			<item name="wcf.editor.button.ratingCallToAction"><![CDATA[CallToAction]]></item>
+			<item name="wcf.editor.button.ratingArguments"><![CDATA[Positive / Negative]]></item>
+			<item name="wcf.editor.button.ratingCallToAction"><![CDATA[Link-Button]]></item>
 		</category>
 		<category name="wcf.bbcode">
 			<item name="wcf.bbcode.rating"><![CDATA[Rating]]></item>

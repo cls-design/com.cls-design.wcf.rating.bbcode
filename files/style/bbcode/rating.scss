@@ -39,7 +39,7 @@
 			}
 		}
 
-		.rating-badge-verdict {
+		.rating-badge-conclusion {
 			font-size: 12px;
 			font-weight: 600;
 			text-transform: uppercase;
@@ -148,7 +148,7 @@
 			border-radius: var(--wcfBorderRadius) var(--wcfBorderRadius) 0 0;
 			display: grid;
 			grid-template-areas:
-				"ratingSummary ratingVerdict"
+				"ratingSummary ratingConclusion"
 				"ratingSummary ratingStars";
 			.rating-badge-summary {
 				grid-area: ratingSummary;
@@ -158,8 +158,8 @@
 					font-size: 18px;
 				}
 			}
-			.rating-badge-verdict {
-				grid-area: ratingVerdict;
+			.rating-badge-conclusion {
+				grid-area: ratingConclusion;
 				text-align: left;
 				display: flex;
 				align-items: flex-end;

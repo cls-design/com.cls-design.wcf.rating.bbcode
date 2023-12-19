@@ -1,12 +1,14 @@
 <?php
 
 namespace wcf\system\bbcode;
+
+use wcf\system\style\FontAwesomeIcon;
 use wcf\system\WCF;
 use wcf\util\MessageUtil;
 use wcf\util\StringUtil;
 
 /**
- * ProgressBBCode.
+ * Rating BBCode.
  * 
  * @package		com.cls-design.wcf.rating.bbcode
  * @copyright	www.cls-design.com
@@ -20,7 +22,7 @@ final class RatingBBCode extends AbstractBBCode {
 	public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser) : string {
 		$content = MessageUtil::stripCrap(StringUtil::trim($content));
 		$ratingSummary = StringUtil::trim($openingTag['attributes'][0] ?? '');
-		$ratingCardOnly = StringUtil::trim($openingTag['attributes'][1] ?? '1');
+		$ratingCardOnly = (int) ($openingTag['attributes'][1] ?? '1');
 
 		// hide content
 		$ratingContent = '';
@@ -28,10 +30,10 @@ final class RatingBBCode extends AbstractBBCode {
 			$ratingContent = '<div class="rating-content">' . $content . '</div>';
 		} 
 
-		// get integer
+		// get float
 		$ratingSummaryInt = str_replace(',', '.', $ratingSummary);
 	
-		// get integral
+		// get integer
 		$ratingIntegral = round($ratingSummaryInt,0);
 
 		// get language
@@ -46,12 +48,12 @@ final class RatingBBCode extends AbstractBBCode {
 		for ($ratingMin = 1; $ratingMin <= 5; $ratingMin++) {
 			if($ratingRounded < $ratingMin ) {
 				if(is_float($ratingRounded) && (round($ratingRounded) == $ratingMin)){
-					$ratingStars .= "<fa-icon name=\"star-half-stroke\"></fa-icon>";
+					$ratingStars .= FontAwesomeIcon::fromValues('star-half-stroke')->toHtml();
 				} else {
-					$ratingStars .= "<fa-icon name=\"star\"></fa-icon>";
+					$ratingStars .= FontAwesomeIcon::fromValues('star')->toHtml();
 				}
 			 } else {
-				$ratingStars .= "<fa-icon name=\"star\" solid></fa-icon>";
+				$ratingStars .= FontAwesomeIcon::fromValues('star', true)->toHtml();
 			 }
 		}
 

@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <package name="com.cls-design.wcf.rating.bbcode" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/package.xsd">
 	<packageinformation>
-		<packagename>WoltLab Suite Core: BBCode Bewertung</packagename>
-		<packagename language="en">WoltLab Suite Core: BBCode Rating</packagename>
+		<packagename>WoltLab Suite Core: BBCode Rating</packagename>
+		<packagename language="de">WoltLab Suite Core: BBCode Bewertung</packagename>
 		<packagedescription><![CDATA[Adds bbcodes for ratings]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Fügt BBCodes für Bewertungen hinzu]]></packagedescription>
-		<version>1.0.0</version>
-		<date>2023-12-15</date>
+		<version>1.0.1</version>
+		<date>2023-12-19</date>
 	</packageinformation>
 
 	<authorinformation>
@@ -21,6 +21,12 @@
 	<excludedpackages>
 		<excludedpackage version="7.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
 	</excludedpackages>
+
+	<instructions type="update" fromversion="1.0.0">
+		<instruction type="file"></instruction>
+		<instruction type="bbcode"></instruction>
+		<instruction type="language"></instruction>
+	</instructions>
 
 	<instructions type="install">
 		<instruction type="file"></instruction>

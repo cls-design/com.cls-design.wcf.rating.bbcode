@@ -31,19 +31,27 @@ final class RatingBBCode extends AbstractBBCode {
 		} 
 
 		// get float
-		$ratingSummaryInt = str_replace(',', '.', $ratingSummary);
+		$ratingSummaryFloat = str_replace(',', '.', $ratingSummary);
 	
 		// get integer
-		$ratingIntegral = round($ratingSummaryInt,0);
+		$ratingInteger = round($ratingSummaryFloat,0);
+		
+		// format summary
+		$languageID = '';
+		if (WCF::getLanguage()->languageCode == "de" || WCF::getLanguage()->languageCode == "es") {
+			$ratingSummaryFormat = str_replace('.', ',', $ratingSummary);
+		} else {
+			$ratingSummaryFormat = str_replace(',', '.', $ratingSummary);
+		}
 
 		// get language
 		$ratingLegend = WCF::getLanguage()->get('wcf.bbcode.rating');
 		$ratingBase= WCF::getLanguage()->get('wcf.bbcode.rating.base');
 		$ratingBaseShort= WCF::getLanguage()->get('wcf.bbcode.rating.base.short');
-		$ratingConclusion = WCF::getLanguage()->get('wcf.bbcode.rating.stars.' . round($ratingSummaryInt,0));
+		$ratingConclusion = WCF::getLanguage()->get('wcf.bbcode.rating.stars.' . round($ratingSummaryFloat,0));
 
 		// build rating
-		$ratingRounded = round($ratingSummaryInt * 2) / 2;
+		$ratingRounded = round($ratingSummaryFloat * 2) / 2;
 		$ratingStars = '';
 		for ($ratingMin = 1; $ratingMin <= 5; $ratingMin++) {
 			if($ratingRounded < $ratingMin ) {
@@ -60,10 +68,10 @@ final class RatingBBCode extends AbstractBBCode {
 		// output
 		if ($parser->getOutputType() == 'text/html') {
 			return <<<HTML
-			<div class="rating-wrapper rating-color-scheme-{$ratingIntegral} rating-wrapper-content-{$ratingCardOnly}">
+			<div class="rating-wrapper rating-color-scheme-{$ratingInteger} rating-wrapper-content-{$ratingCardOnly}">
 				<div class="rating-badge">
 					<div class="rating-badge-legend">{$ratingLegend}</div>
-					<div class="rating-badge-summary">{$ratingSummary}<span>{$ratingBaseShort}</span></div>
+					<div class="rating-badge-summary">{$ratingSummaryFormat}<span>{$ratingBaseShort}</span></div>
 					<div class="rating-badge-conclusion">{$ratingConclusion}</div>
 					<div class="rating-badge-stars">{$ratingStars}</div>
 				</div>
@@ -71,9 +79,9 @@ final class RatingBBCode extends AbstractBBCode {
 			</div>
 			HTML;
 		} elseif ($parser->getOutputType() == 'text/simplified-html') {
-			return '<div class="rating-wrapper-short">' . $ratingLegend . ': ' . $ratingSummary . ' ' . $ratingBase . ' - ' . $ratingConclusion . '</div><div> ' . $content . '</div>';
+			return '<div class="rating-wrapper-short">' . $ratingLegend . ': ' . $ratingSummaryFormat . ' ' . $ratingBase . ' - ' . $ratingConclusion . '</div><div> ' . $content . '</div>';
 		} else {
-			return $ratingLegend . ': ' . $ratingSummary . ' ' . $ratingBase . ' - ' . $ratingConclusion;
+			return $ratingLegend . ': ' . $ratingSummaryFormat . ' ' . $ratingBase . ' - ' . $ratingConclusion;
 		}
 		return '';
 	}

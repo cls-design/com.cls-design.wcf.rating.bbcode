@@ -1,6 +1,7 @@
 <?php
 
 namespace wcf\system\bbcode;
+
 use wcf\system\WCF;
 use wcf\util\MessageUtil;
 use wcf\util\StringUtil;
@@ -39,7 +40,7 @@ final class RatingArgumentsBBCode extends AbstractBBCode {
 			</div>
 			HTML;
 		} elseif ($parser->getOutputType() == 'text/simplified-html') {
-			return '<div class="rating-arguments-wrapper"><span>+</span><span> / </span><span>-</span> ' . $ratingArgumentsShort .'</div>';
+			return '<div class="rating-arguments-wrapper">' . $ratingArgumentsShort . '</div>';
 		} else {
 			return $ratingArgumentsShort;
 		}

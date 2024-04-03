@@ -9,16 +9,16 @@
 		</category>
 		<category name="wcf.bbcode">
 			<item name="wcf.bbcode.rating"><![CDATA[Rating]]></item>
-			<item name="wcf.bbcode.rating.stars.1"><![CDATA[Non Existant]]></item>
+			<item name="wcf.bbcode.rating.stars.1"><![CDATA[Worst]]></item>
 			<item name="wcf.bbcode.rating.stars.2"><![CDATA[Poor]]></item>
-			<item name="wcf.bbcode.rating.stars.3"><![CDATA[Average]]></item>
+			<item name="wcf.bbcode.rating.stars.3"><![CDATA[Neutral]]></item>
 			<item name="wcf.bbcode.rating.stars.4"><![CDATA[Good]]></item>
 			<item name="wcf.bbcode.rating.stars.5"><![CDATA[Excellent]]></item>	
 			<item name="wcf.bbcode.rating.base"><![CDATA[out of 5]]></item>
 			<item name="wcf.bbcode.rating.base.short"><![CDATA[/5]]></item>
 			<item name="wcf.bbcode.rating.arguments.positive"><![CDATA[Positive]]></item>
 			<item name="wcf.bbcode.rating.arguments.negative"><![CDATA[Negative]]></item>
-			<item name="wcf.bbcode.rating.arguments.short"><![CDATA[List of positive and negative characteristics.]]></item>
+			<item name="wcf.bbcode.rating.arguments.short"><![CDATA[(List of positive and negative characteristics.)]]></item>
 		</category>	
 	</import>
 </language>

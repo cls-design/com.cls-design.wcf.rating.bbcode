@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="es" languagename="Español" countrycode="es">
+	<import>
+		<category name="wcf.editor">
+			<item name="wcf.editor.button.rating"><![CDATA[Calificación [rating=1.0-5.0][/rating]]]></item>
+			<item name="wcf.editor.button.ratingBar"><![CDATA[Calificación individual [ratingbar=1-5][/ratingbar]]]></item>
+			<item name="wcf.editor.button.ratingArguments"><![CDATA[Pros / Contras]]></item>
+			<item name="wcf.editor.button.ratingCallToAction"><![CDATA[CallToAction]]></item>
+		</category>
+		<category name="wcf.bbcode">
+			<item name="wcf.bbcode.rating"><![CDATA[Calificación]]></item>
+			<item name="wcf.bbcode.rating.stars.1"><![CDATA[Inexistente]]></item>
+			<item name="wcf.bbcode.rating.stars.2"><![CDATA[Pobre]]></item>
+			<item name="wcf.bbcode.rating.stars.3"><![CDATA[Neutral]]></item>
+			<item name="wcf.bbcode.rating.stars.4"><![CDATA[Bien]]></item>
+			<item name="wcf.bbcode.rating.stars.5"><![CDATA[Excelente]]></item>
+			<item name="wcf.bbcode.rating.base"><![CDATA[de 5]]></item>
+			<item name="wcf.bbcode.rating.base.short"><![CDATA[/5]]></item>
+			<item name="wcf.bbcode.rating.arguments.positive"><![CDATA[Positivo]]></item>
+			<item name="wcf.bbcode.rating.arguments.negative"><![CDATA[Negativo]]></item>
+			<item name="wcf.bbcode.rating.arguments.short"><![CDATA[(Lista de características positivas y negativas.)]]></item>
+		</category>
+	</import>
+</language>

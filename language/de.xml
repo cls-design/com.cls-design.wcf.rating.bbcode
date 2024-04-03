@@ -18,7 +18,7 @@
 			<item name="wcf.bbcode.rating.base.short"><![CDATA[/5]]></item>
 			<item name="wcf.bbcode.rating.arguments.positive"><![CDATA[Positiv]]></item>
 			<item name="wcf.bbcode.rating.arguments.negative"><![CDATA[Negativ]]></item>
-			<item name="wcf.bbcode.rating.arguments.short"><![CDATA[Auflistung positiver und negativer Eigenschaften.]]></item>
+			<item name="wcf.bbcode.rating.arguments.short"><![CDATA[(Auflistung positiver und negativer Eigenschaften.)]]></item>
 		</category>	
 	</import>
 </language>

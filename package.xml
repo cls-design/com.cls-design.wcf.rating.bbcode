@@ -5,8 +5,8 @@
 		<packagename language="de">WoltLab Suite Core: BBCode Bewertung</packagename>
 		<packagedescription><![CDATA[Adds bbcodes for ratings]]></packagedescription>
 		<packagedescription language="de"><![CDATA[Fügt BBCodes für Bewertungen hinzu]]></packagedescription>
-		<version>1.0.1</version>
-		<date>2023-12-19</date>
+		<version>1.0.2</version>
+		<date>2024-01-08</date>
 	</packageinformation>
 
 	<authorinformation>
@@ -22,9 +22,8 @@
 		<excludedpackage version="7.0.0 Alpha 1">com.woltlab.wcf</excludedpackage>
 	</excludedpackages>
 
-	<instructions type="update" fromversion="1.0.0">
+	<instructions type="update" fromversion="1.0.1">
 		<instruction type="file"></instruction>
-		<instruction type="bbcode"></instruction>
 		<instruction type="language"></instruction>
 	</instructions>
 
